@@ -1,0 +1,10 @@
+.idea/
+*/.idea/
+*/.mvn
+*/gradle/
+*/.gradle/
+*/gradle*
+out/
+target/
+*.iml
+*/*.iml
