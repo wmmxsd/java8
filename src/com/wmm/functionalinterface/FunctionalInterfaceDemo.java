@@ -18,7 +18,12 @@ public class FunctionalInterfaceDemo {
         System.out.println(functionalInterfaceDemo.getValue(() -> "hello"));
         functionalInterfaceDemo.accept("wmm", System.out::println);
         functionalInterfaceDemo.test(4, value -> value > 0);
-        List<Integer> list = functionalInterfaceDemo.apply(5, Collections::singletonList);
+        List<Integer> list = functionalInterfaceDemo.apply(5, value -> {
+            if (value > 1) {
+                return Collections.singletonList(value);
+            }
+            return null;
+        });
     }
 
     /**
