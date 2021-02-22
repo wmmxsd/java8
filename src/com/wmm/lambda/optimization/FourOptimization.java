@@ -22,7 +22,7 @@ public class FourOptimization {
         userList.add(user3);
         userList.add(user4);
         userList.add(user5);
-        userList.stream().filter(user -> user.getAge() > 20).forEach(user -> System.out.println(user));
+        userList.stream().filter(user -> user.getAge() > 20).forEach(System.out::println);
         userList.stream().filter(user -> user.getAge() > 20).forEach(System.out::println);
         System.out.println("********************************");
         userList.stream().filter(user -> user.getSex() == 1).forEach(System.out::println);

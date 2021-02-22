@@ -24,6 +24,8 @@ public class FunctionalInterfaceDemo {
             }
             return null;
         });
+
+        System.out.println(functionalInterfaceDemo.supply(() -> "hello world"));
     }
 
     /**
@@ -51,5 +53,9 @@ public class FunctionalInterfaceDemo {
 
     public List<Integer> apply(Integer integer, Function<Integer, List<Integer>> function) {
         return function.apply(integer);
+    }
+
+    public String supply(Supplier<String> supplier) {
+        return supplier.get();
     }
 }

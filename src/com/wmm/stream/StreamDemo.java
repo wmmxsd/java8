@@ -17,8 +17,8 @@ import java.util.stream.Stream;
  */
 public class StreamDemo {
     public static void main(String[] args) {
-        //init();
-        //intermediate();
+        init();
+        intermediate();
         terminal();
     }
 
@@ -91,7 +91,7 @@ public class StreamDemo {
         System.out.println(count2);
 
         //将流转换为其他形式
-        List<Integer> array = list.stream().collect(Collectors.toList());
+        List<Integer> array = new ArrayList<>(list);
 
         //检查是否所有元素都匹配所提供的的断言性函数
         System.out.println(list.stream().allMatch(element -> element > 1));

@@ -27,9 +27,10 @@ public class InstantDemo {
         System.out.println(instant.getEpochSecond());
         System.out.println(instant.getNano());
         //1970-01-01T00:00:00Z + x毫秒
-        Instant now = Instant.ofEpochMilli(System.currentTimeMillis());
+        Instant now = Instant.ofEpochMilli(instant.toEpochMilli());
         System.out.println(now);
         //1970-01-01T00:00:00Z + x秒
+        System.out.println(Instant.ofEpochSecond(instant.getEpochSecond()));
         Instant instant3 = Instant.ofEpochSecond(instant.getEpochSecond(), instant.getNano());
         Instant instant4 = Instant.ofEpochSecond(instant.getEpochSecond() + 60, instant.getNano());
         System.out.println(instant3);

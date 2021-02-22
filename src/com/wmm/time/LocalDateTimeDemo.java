@@ -55,7 +55,10 @@ public class LocalDateTimeDemo {
         //日期时间的加减
         System.out.println("**********日期时间的加减**********");
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss.SSS");
+        DateTimeFormatter dateTimeFormatter1 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
         System.out.println("当前时间：" + now.format(dateTimeFormatter));
+        System.out.println("当前时间：" + now.format(dateTimeFormatter1));
+
         LocalDateTime plusTime = now.plusYears(1).plusMonths(1).plusDays(1).plusHours(1).plusMinutes(1).plusSeconds(1).plusNanos(1000000);
         System.out.println("加后的时间:" + plusTime.format(dateTimeFormatter));
         LocalDateTime minusTime = now.minusYears(1).minusMonths(1).minusDays(1).minusHours(1).minusMinutes(1).minusSeconds(1).minusNanos(1000000);
